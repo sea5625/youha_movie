@@ -10,13 +10,19 @@ import spinner from "../assets/ajax-loader.gif";
 
 
 const MoviesConfainer = () => {
-  const { data, loading } = useSelector((state: RootState) => state.movies.movies);
+
+  // RootState 에서 state.movies를 반환 (store에 구독되어 있는 데이터를 추출)
+  const { data, loading, error } = useSelector((state: RootState) => state.movies.movies);
+
+  // Dispatch 생성
   const dispatch = useDispatch();
 
+  // render 가장 초기에 "man"을 인자로하는 request
   useEffect(() => {
     dispatch(getMoviesInfoAsync.request("man"));
   },[])
 
+  // typesafe-actions 라이브러리를 사용하여 생성한 AsyncAction 실행 : getMoviesInfoAsync
   const onSubmitMovieName = (movieName: string) => {
     dispatch(getMoviesInfoAsync.request(movieName));
   };      
@@ -28,6 +34,8 @@ const MoviesConfainer = () => {
         <MoviesSearchForm onSubmitMovieName={onSubmitMovieName} />
           <p className="App-intro">Sharing a few of our favourite movies</p>
           {loading &&  <img className="spinner" src={spinner} alt="Loading spinner" />}
+          {console.log(error,"???")}
+          {/** Saga 함수에서 */}
           {data && <MoviesInfo search={data.Search} response={data.Response} errorMessage={data.Error}/>}
       </div>
     </div>

@@ -4,13 +4,13 @@ import { call, put, takeEvery } from 'redux-saga/effects';
 
 function* getMoviesInfoSaga(action: ReturnType<typeof getMoviesInfoAsync.request>) {
   try {
-    const movies: MoviesInfo = yield call(getMoviesInfo, action.payload);
+    const movies : MoviesInfo = yield call(getMoviesInfo, action.payload);
     yield put(getMoviesInfoAsync.success(movies));
   } catch (e) {
     yield put(getMoviesInfoAsync.failure(e));
   }
 }
 
-export function* githubSaga() {
+export function* moviesSaga() {
   yield takeEvery(GET_MOVIES_INFO, getMoviesInfoSaga);
 }

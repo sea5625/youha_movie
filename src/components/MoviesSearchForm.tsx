@@ -18,7 +18,7 @@ const MoviesSearchForm = ({ onSubmitMovieName }: MoviesSearchFormProps) => {
 
   return (
     <form className="search" onSubmit={onSubmit}>
-      <input onChange={onChange} value={input}/>
+      <input onChange={onChange} value={input} />
       <input type="submit" value="SEARCH" />
     </form>
   );
