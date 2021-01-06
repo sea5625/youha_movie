@@ -1,31 +1,3 @@
-<div align="center">
-  <img src="https://github.com/sultan99/react-on-lambda/raw/gh-pages/logo.svg?sanitize=true" width="110" height="110"/>
-  <br/>
-  <br/>
-  <br/>
-  
-  <img src="https://raw.githubusercontent.com/sultan99/react-on-lambda/gh-pages/assets/comics.png"/>
-</div>
-
-<br/>
-<br/>
-
-# React on lambda
-![GitHub package.json version](https://img.shields.io/github/package-json/v/sultan99/react-on-lambda.svg)
-[![Build Status](https://travis-ci.org/sultan99/react-on-lambda.svg?branch=master)](https://travis-ci.org/sultan99/react-on-lambda)
-[![Coverage Status](https://coveralls.io/repos/github/sultan99/react-on-lambda/badge.svg)](https://coveralls.io/github/sultan99/react-on-lambda)
-[![gzip size](http://img.badgesize.io/https://unpkg.com/react-on-lambda@0.6.1/dist/react-on-lambda.min.js?compression=gzip)](https://unpkg.com/react-on-lambda@0.6.1/dist/react-on-lambda.min.js)
-[![GitHub license](https://img.shields.io/github/license/sultan99/react-on-lambda.svg)](https://github.com/sultan99/react-on-lambda/blob/master/LICENSE)
-
-> A tiny library that simplifies the use of [React](https://github.com/facebook/react) without JSX.
-
-<br/>
-
-JSX has simple, declarative and html-like syntax, nice extension to ECMAScript.
-Unfortunately, despite these cool features you deal with text.
-Most of time you find yourself doing js code inside html, and inside that html you make again another js code and so on.
-In order to reuse some jsx fragments you have to wrap them by functions. Then you may come to the main question:
-
 #### Why not just use functions instead of jsx strings?
 
 And get all benefits of functional programming:
