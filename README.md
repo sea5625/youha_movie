@@ -7,50 +7,22 @@
 Project clone & install
 
 ```sh
-$ git clone https://github.com/sea5625/youha_movie.git
-$ cd youha_movie
-$ npm `or` yarn install
+$ git clone https://github.com/sea5625/youha_movie.git # clone
+$ cd youha_movie 
+
+# yarn 
+$ yarn install
+
+# npm 
+$ npm install
 ```
 
 Start
 
 ```sh
-$ npm `or` yarn start
+# yarn 
+$ yarn start
+
+# npm 
+$ npm start
 ```
-
-
-## API documentation
-
-**Creating element and component**
-
-```js
-import λ, {div} from 'react-on-lambda'
-
-div(`Hello world!`)
-// jsx equivalent
-<div>Hello world!</div>
-
-λ.section({class: `sample`}, `Hello world!`)
-// jsx equivalent
-<section className="sample">Hello world!</section>
-
-λ(Provider, {store}, app)
-// jsx equivalent
-<Provider store={store}><App/></Provider>
-```
-
-
-## Feedback 
-Any questions or suggestions?
-
-You are welcome to discuss it on:
-
-[![Gitter](https://badges.gitter.im/react-on-lambda/community.svg)](https://gitter.im/react-on-lambda/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/sultan_arziev)
-
-<br/>
-<br/>
-
-<a href="https://www.buymeacoffee.com/KGEzqayNQ" target="_blank">
-  <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg" alt="Buy Me A Coffee"/>
-</a>
