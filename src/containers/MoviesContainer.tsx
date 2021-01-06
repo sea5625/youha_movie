@@ -34,8 +34,6 @@ const MoviesConfainer = () => {
         <MoviesSearchForm onSubmitMovieName={onSubmitMovieName} />
           <p className="App-intro">Sharing a few of our favourite movies</p>
           {loading &&  <img className="spinner" src={spinner} alt="Loading spinner" />}
-          {console.log(error,"???")}
-          {/** Saga 함수에서 */}
           {data && <MoviesInfo search={data.Search} response={data.Response} errorMessage={data.Error}/>}
       </div>
     </div>
