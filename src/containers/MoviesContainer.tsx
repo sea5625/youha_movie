@@ -12,7 +12,7 @@ import spinner from "../assets/ajax-loader.gif";
 const MoviesConfainer = () => {
 
   // RootState 에서 state.movies를 반환 (store에 구독되어 있는 데이터를 추출)
-  const { data, loading } = useSelector((state: RootState) => state.movies.movies);
+  const { data, loading, error } = useSelector((state: RootState) => state.movies.movies);
 
   // Dispatch 생성
   const dispatch = useDispatch();
@@ -33,6 +33,7 @@ const MoviesConfainer = () => {
         <Header text="HOOKED" />
         <MoviesSearchForm onSubmitMovieName={onSubmitMovieName} />
           <p className="App-intro">Sharing a few of our favourite movies</p>
+          {error && <div className="errorMessage">Network Error!</div>}
           {loading &&  <img className="spinner" src={spinner} alt="Loading spinner" />}
           {data && <MoviesInfo search={data.Search} response={data.Response} errorMessage={data.Error}/>}
       </div>
