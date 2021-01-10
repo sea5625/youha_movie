@@ -10,14 +10,14 @@ Project clone & install
 $ git clone https://github.com/sea5625/youha_movie.git # clone
 $ cd youha_movie 
 
-# yarn 
+# yarn module install
 $ yarn install
 
-# npm 
+# npm module install
 $ npm install
 ```
 
-Start
+Start & Watch
 
 ```sh
 # yarn 
