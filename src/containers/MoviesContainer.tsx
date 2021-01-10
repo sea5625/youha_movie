@@ -33,8 +33,12 @@ const MoviesConfainer = () => {
         <Header text="HOOKED" />
         <MoviesSearchForm onSubmitMovieName={onSubmitMovieName} />
           <p className="App-intro">Sharing a few of our favourite movies</p>
+
+          {/* error = movies.error, Network Error (AxiosError) */}
           {error && <div className="errorMessage">Network Error!</div>}
           {loading &&  <img className="spinner" src={spinner} alt="Loading spinner" />}
+
+          {/* data.Error = movies.data.Error, API Response Error code, message */}
           {data && <MoviesInfo search={data.Search} response={data.Response} errorMessage={data.Error}/>}
       </div>
     </div>
