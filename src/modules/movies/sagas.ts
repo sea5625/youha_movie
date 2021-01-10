@@ -5,7 +5,7 @@ import { call, put, takeEvery } from 'redux-saga/effects';
 function* getMoviesInfoSaga(action: ReturnType<typeof getMoviesInfoAsync.request>) {
   try {
     const movies : MoviesInfo = yield call(getMoviesInfo, action.payload);
-    yield put(getMoviesInfoAsync.success(movies));
+      yield put(getMoviesInfoAsync.success(movies));
   } catch (e) {
     yield put(getMoviesInfoAsync.failure(e));
   }
